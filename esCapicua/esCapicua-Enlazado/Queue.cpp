@@ -10,11 +10,9 @@ void enQueue(Queue& t, int y){
 }
 int deQueue(Queue& t){
 	if (t.nivel != 0){
-		Node *p = t.front;
-		int valor = p->value;
+		int valor = t.front->value;
 		t.front->next;
 		--t.nivel;
-		delete p;
 		return valor;
 	}
 	std::cout<<"Queue vacio!\n";
