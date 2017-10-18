@@ -1,4 +1,5 @@
 # Stack-Queue
+>Trabajo con Int.
 
 Se definen los tipos de dato Stack(pila) y Queue(cola).
 Se define y ejecuta la función esCapicua, invocando a los tipos de dato Stack y Queue.
