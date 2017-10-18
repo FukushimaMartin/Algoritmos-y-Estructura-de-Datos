@@ -7,13 +7,14 @@ void push (Stack& s, int x){
 	p->next = s.first;
 	s.first = p;
 	++s.nivel;
+	delete p;
 }
 int pop (Stack& s){
 	if (s.nivel != 0){
-		Nodo *p = s.first;
-		s.first->next;
+		int valor = s.first->value;
+		s.first = s.first->next;
 		--s.nivel;
-		return p->value;
+		return valor;
 	}
 	std::cout<<"Stack vacio!";
 }
