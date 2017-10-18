@@ -1,4 +1,5 @@
 # Browser
+>Trabajo con String
 
 Se utiliza el tipo de dato Stack para el desarrollo de las funciones "Back" y "Forward" de un navegador cualquiera.
 
