@@ -9,14 +9,14 @@ void enQueue(queue& t, int y){
 		t.rear = (t.rear+1) % M;
 		
 	}else {
-		std::cout<<"Se supero el tamaño maximo del Queue, considere redimensionar\n";
+		std::cout<<"Se supero el tamaÃ±o maximo del Queue, considere redimensionar\n";
 	}
 }
 int deQueue(queue& t){
 	if (t.size_t > 0){
 		--t.size_t;
 		t.front = (t.front+1) % M;
-		return t.b.at(t.front-1);
+		return t.b.at((800+t.front-1) % M);
 	} else {
 		std::cout<<"El Queue se encuentra vacio\n";
 		return 0;
