@@ -6,12 +6,18 @@ void enQueue(Queue& t, int y){
 	Node *q = new Node;
 	q->value = y;
 	t.rear->next = q;
+	t.rear = q;
+	if (t.nivel == 0){
+		t.front = t.rear;
+		t.rear->next = nullptr;
+	}
 	++t.nivel;
+	delete q;
 }
 int deQueue(Queue& t){
 	if (t.nivel != 0){
 		int valor = t.front->value;
-		t.front->next;
+		t.front = t.front->next;
 		--t.nivel;
 		return valor;
 	}
