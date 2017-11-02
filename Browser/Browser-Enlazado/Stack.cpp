@@ -23,7 +23,7 @@ std::string top(const Stack& s){
 	if (s.nivel != 0){
 		return s.first->value;
 	}
-	return s.first->value;
+	return "Pagina en blanco";
 }
 unsigned length(const Stack& s){
 	return s.nivel;
