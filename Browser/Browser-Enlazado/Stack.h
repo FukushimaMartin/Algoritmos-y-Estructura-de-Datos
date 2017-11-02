@@ -8,7 +8,7 @@ struct Nodo{
 };
 
 struct Stack{
-	Nodo *first = new Nodo;
+	Nodo *first = nullptr;
 	unsigned nivel=0;
 };
 
