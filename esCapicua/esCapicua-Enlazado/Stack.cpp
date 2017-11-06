@@ -7,14 +7,13 @@ void push (Stack& s, int x){
 	p->next = s.first;
 	s.first = p;
 	++s.nivel;
-	delete p;
 }
 int pop (Stack& s){
 	if (s.nivel != 0){
-		int valor = s.first->value;
+		Nodo *p = s.first;
 		s.first = s.first->next;
 		--s.nivel;
-		return valor;
+		return p->value;
 	}
 	std::cout<<"Stack vacio!";
 }
@@ -26,4 +25,8 @@ int top(const Stack& s){
 }
 unsigned length(const Stack& s){
 	return s.nivel;
+}
+void vaciarStack(Stack& s){
+	s.first = nullptr;
+	s.nivel = 0;
 }
