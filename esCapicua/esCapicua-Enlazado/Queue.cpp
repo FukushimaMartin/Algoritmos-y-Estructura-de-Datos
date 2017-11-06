@@ -3,16 +3,16 @@
 
 
 void enQueue(Queue& t, int y){
-	Node *q = new Node;
-	q->value = y;
-	t.rear->next = q;
-	t.rear = q;
-	if (t.nivel == 0){
-		t.front = t.rear;
-		t.rear->next = nullptr;
+	if(t.nivel == 0){
+		t.rear -> value = y;
+		++t.nivel;
+	} else {
+		Node *q = new Node;
+		q->value = y;
+		t.rear->next = q;
+		t.rear = q;
+		++t.nivel;
 	}
-	++t.nivel;
-	delete q;
 }
 int deQueue(Queue& t){
 	if (t.nivel != 0){
@@ -31,4 +31,9 @@ int first(const Queue& t){
 }
 unsigned length(const Queue& t){
 	return t.nivel;
+}
+void vaciarQueue(Queue& t){
+	t.front = new Node;
+	t.rear = t.front;
+	t.nivel = 0;
 }
