@@ -15,4 +15,4 @@ void push(Stack&, int);
 int pop(Stack&);
 int top(const Stack&);
 unsigned length(const Stack&);
-
+void vaciarStack(Stack&);
