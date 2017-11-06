@@ -32,9 +32,11 @@ void accionarMenu(unsigned opcion){
 	switch(opcion){
 		case 1:
 			pila();
+			vaciarStack(s);
 			break;
 		case 2:
 			cola();
+			vaciarQueue(t);
 			break;
 		case 3:
 			break;
