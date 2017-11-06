@@ -8,14 +8,13 @@ void push (Stack& s, std::string x){
 	p->next = s.first;
 	s.first = p;
 	++s.nivel;
-	delete p;
 }
 std::string pop (Stack& s){
 	if (s.nivel != 0){
-		std::string valor = s.first->value;
+		Nodo *p = s.first;
 		s.first = s.first->next;
 		--s.nivel;
-		return valor;
+		return p->value;
 	}
 	return "Pagina en blanco";
 }
