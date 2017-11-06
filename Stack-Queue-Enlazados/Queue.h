@@ -7,8 +7,8 @@ struct Node{
 };
 
 struct Queue{
-	Node *front = nullptr;
-	Node *rear = nullptr;
+	Node *front = new Node;
+	Node *rear = front;
 	unsigned nivel=0;
 };
 
