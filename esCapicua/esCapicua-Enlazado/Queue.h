@@ -7,8 +7,8 @@ struct Node{
 };
 
 struct Queue{
-	Node *front = nullptr;
-	Node *rear = nullptr;
+	Node *front = new Node;
+	Node *rear = front;
 	unsigned nivel=0;
 };
 
@@ -16,3 +16,4 @@ void enQueue(Queue&, int);
 int deQueue(Queue&);
 int first(const Queue&);
 unsigned length(const Queue&);
+void vaciarQueue(Queue&);
